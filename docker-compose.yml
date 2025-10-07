@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    ports:
+      - "7001:7001"
+    volumes:
+      - ./models:/app/models:ro   # local model klasörünü mapping (opsiyonel)
+    restart: unless-stopped
